@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.HomeController">
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="335.0" spacing="2.0" stylesheets="@style.css">
+         <children>
+            <StackPane>
+               <children>
+                  <ImageView fitHeight="149.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/list1.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" onMouseClicked="#ClickOnList" spacing="10.0">
+                     <children>
+                        <Label style="-fx-background-color: whitesmoke;" text="YOUR LIST" textFill="#757171">
+                           <font>
+                              <Font name="Bodoni MT" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label style="-fx-background-color: whitesmoke;" text="You can add, update and delete items of your list">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+            <StackPane>
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/dish.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" onMouseClicked="#ClickOnRecip" spacing="10.0">
+                     <children>
+                        <Label style="-fx-background-color: whitesmoke;" text="RECIPES">
+                           <font>
+                              <Font name="Bodoni MT" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label style="-fx-background-color: whitesmoke;" text="Here you will find some delicious recipes to make">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+            <StackPane>
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/timer2.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" onMouseClicked="#ClickOnTimer" spacing="10.0">
+                     <children>
+                        <Label style="-fx-background-color: whitesmoke;" text="TIMER" textFill="#6f6b6b">
+                           <font>
+                              <Font name="Bodoni MT" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label style="-fx-background-color: whitesmoke;" text=" set a timer to help you preparing your meals">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="71.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Label prefHeight="38.0" prefWidth="65.0" text="Hello..">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="homename">
+               <font>
+                  <Font name="Bodoni MT" size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <Pane prefHeight="63.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="#61b079" glyphName="SIGN_OUT" layoutX="156.0" layoutY="39.0" onMouseClicked="#exit" size="25" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

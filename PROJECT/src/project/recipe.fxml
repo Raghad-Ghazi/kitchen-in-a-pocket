@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="10.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.RecipeController">
+   <children>
+      <FontAwesomeIconView fill="#61b079" glyphName="ARROW_LEFT" onMouseClicked="#back" size="20" />
+      <VBox prefHeight="97.0" prefWidth="329.0">
+         <children>
+            <Label text="&quot;Enter the ingredient name then press enter&quot;">
+               <VBox.margin>
+                  <Insets left="40.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <StackPane alignment="CENTER_RIGHT">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" top="15.0" />
+               </VBox.margin>
+               <children>
+                  <TextField fx:id="textFiledSearch" onKeyPressed="#searchResipes" promptText="sugar e.g." />
+                  <FontAwesomeIconView fill="#61b079" glyphName="SEARCH" size="13" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <StackPane>
+         <children>
+            <TextArea fx:id="testArea" editable="false" prefHeight="414.0" prefWidth="335.0" wrapText="true" />
+            <Label fx:id="norec" text="Sorry ,No recipe was found :(" visible="false" />
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

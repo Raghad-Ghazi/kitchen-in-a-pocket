@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.SignupController">
+   <children>
+      <Pane>
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="64.0" layoutX="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/copy(69).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="82.0" layoutY="37.0" text="in a pocket" textFill="#61b079">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="24.0" />
+               </font>
+            </Label>
+            <Line endX="16.66668701171875" layoutX="181.0" layoutY="40.0" startX="-100.0" />
+            <Label layoutX="81.0" layoutY="10.0" text="Kitchen">
+               <font>
+                  <Font name="Yu Gothic Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="60.0" />
+         </VBox.margin>
+      </Pane>
+      <VBox prefHeight="188.0" prefWidth="346.0" spacing="20.0">
+         <children>
+            <StackPane alignment="CENTER_RIGHT">
+               <children>
+                  <TextField fx:id="nameLog" prefHeight="32.0" prefWidth="228.0" promptText="Name">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TextField>
+                  <FontAwesomeIconView fill="#61b079" glyphName="USER" size="14" />
+               </children>
+            </StackPane>
+            <StackPane alignment="CENTER_RIGHT">
+               <children>
+                  <TextField fx:id="emailLog" prefHeight="32.0" prefWidth="228.0" promptText="E-mail">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TextField>
+                  <FontAwesomeIconView fill="#61b079" glyphName="ENVELOPE" size="13" />
+               </children>
+            </StackPane>
+            <StackPane alignment="CENTER_RIGHT">
+               <children>
+                  <PasswordField fx:id="passwordLog" prefHeight="32.0" prefWidth="228.0" promptText="Password" />
+                  <FontAwesomeIconView fill="#61b079" glyphName="LOCK" size="14" />
+               </children>
+            </StackPane>
+            <StackPane alignment="CENTER_RIGHT">
+               <children>
+                  <PasswordField fx:id="passwordLog1" prefHeight="32.0" prefWidth="228.0" promptText="Confirm Password" />
+                  <FontAwesomeIconView fill="#61b079" glyphName="LOCK" size="14" />
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets left="60.0" right="60.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="195.0" prefWidth="279.0" spacing="20.0">
+         <children>
+            <Label fx:id="errormsg" alignment="CENTER" textAlignment="CENTER" textFill="#ba0000" visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signup" prefHeight="39.0" prefWidth="228.0" text="SIGN UP" textFill="WHITE" />
+            <Line endX="140.0" startX="-138.0" stroke="#d0d0d0" />
+            <HBox alignment="CENTER" prefHeight="2.0" prefWidth="335.0" spacing="3.0">
+               <children>
+                  <Label text="hava an account ?" />
+                  <Label fx:id="haveaccount" onMouseClicked="#toLogin" text="Log in" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
